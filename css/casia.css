@@ -1,0 +1,1064 @@
+* {
+    outline: 1px solid tomato;
+}
+
+
+
+
+
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 999;
+
+}
+
+.header.on {
+    background: rgba(0, 0, 0, 0.7);
+    transition: 0.5s;
+
+}
+
+.header h1 {
+    min-width: 220px;
+}
+
+.header .header_wrap {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 100px;
+    padding: 0 30px;
+
+}
+
+.gnb>ul {
+    display: flex;
+    gap: 40px;
+}
+
+.gnb a {
+    display: block;
+    white-space: nowrap;
+    color: #fff;
+    font-size: 18px;
+}
+
+.header .custiomer_link {
+    width: 220px;
+}
+
+.header .custiomer_link a {
+    display: block;
+    white-space: nowrap;
+    font-size: 25px;
+    font-weight: 700;
+    color: #fff;
+}
+
+
+
+.mainvisual {
+    position: relative;
+    z-index: 1;
+
+    border-radius: 0 0 200px 0;
+    overflow: hidden;
+
+
+}
+
+.mainvisual::after {
+    content: "";
+    position: absolute;
+    inset: 0 0 0 0;
+    background: #000;
+    opacity: 0.3;
+}
+
+.mainvisual .slogan {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 999;
+
+}
+
+.mainvisual h2 {
+    margin: 0 0 30px 0;
+    color: #fff;
+    text-align: center;
+    text-shadow: 0 0 2px #000;
+}
+
+.mainvisual h2 strong {
+    display: block;
+    margin: 0 0 20px 0;
+    font-size: 20px;
+    font-weight: 300;
+}
+
+.mainvisual h2 span {
+    display: block;
+    font-size: 60px;
+    font-weight: 700;
+}
+
+.mainvisual p {
+    max-width: 400px;
+    text-shadow: 0 0 3px #000;
+    font-size: 15px;
+    margin: 0 auto;
+    color: #fff;
+    text-align: center;
+}
+
+
+.mainvisual .mainslide .itm01 {
+    height: 100vh;
+    background: url(../images/bg_intro01.jpg )no-repeat center center/cover;
+}
+
+.mainvisual .mainslide .itm02 {
+    height: 100vh;
+    background: url(../images/bg_intro02.jpg )no-repeat center center/cover;
+}
+
+.mainvisual .mainslide .itm03 {
+    height: 100vh;
+    background: url(../images/bg_intro03.jpg )no-repeat center center/cover;
+}
+
+.mainvisual .slick-dots {
+    position: absolute;
+    bottom: 200px;
+
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 999;
+
+
+}
+
+
+
+.mainvisual .slick-dots>li button {
+    position: relative;
+    width: 80px;
+    height: 4px;
+    background: #ddd;
+    border-radius: 2px;
+    overflow: hidden;
+    margin: 0 2px;
+
+    border: none;
+    font-size: 0;
+
+
+}
+
+.mainvisual .slick-dots>li {
+    display: inline-block;
+    padding: 5px 0;
+    cursor: pointer;
+}
+
+.mainvisual .slick-dots>li button::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 100%;
+    background: #555;
+
+}
+
+.mainvisual .slick-dots>li.slick-active button::after {
+    width: 100%;
+    transition: 3s;
+}
+
+.mainvisual .arrows {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 999;
+
+    max-width: 1400px;
+    width: 100%;
+
+    color: #fff;
+    font-size: 30px;
+
+
+}
+
+.mainvisual .arrows i {
+    padding: 35px;
+    background: rgba(0, 0, 0, 0.1);
+    border-radius: 50%;
+    color: #fff;
+    font-size: 30px;
+    opacity: 0.5;
+    cursor: pointer;
+    transition: 1s;
+}
+
+.mainvisual .arrows .left {
+
+    position: absolute;
+    left: 0;
+    top: 0;
+}
+
+
+.mainvisual:hover .arrows .left {
+    opacity: 0.8;
+    transform: translate(100px, 0)
+}
+
+.mainvisual .arrows .right {
+    position: absolute;
+    right: 0;
+    top: 0;
+}
+
+.mainvisual:hover .arrows .right {
+    opacity: 0.8;
+    transform: translate(-100px, 0)
+}
+
+.mainvisual .scroll {
+    position: absolute;
+    bottom: 100px;
+    left: 50%;
+    transform: translate(-50%, 0);
+    z-index: 999;
+
+}
+
+.mainvisual .scroll span {
+    position: relative;
+    color: #fff;
+    font-size: 12px;
+    text-transform: uppercase;
+
+}
+
+.mainvisual .scroll span::before {
+    content: "";
+    position: absolute;
+    top: 20px;
+    left: 50%;
+    width: 1px;
+    height: 100px;
+    background: rgba(255, 255, 255, 0.5);
+    transform: translate(-50%, 0)
+}
+
+.mainvisual .scroll span::after {
+    content: "";
+    position: absolute;
+    top: 20px;
+    left: 50%;
+    width: 5px;
+    height: 5px;
+    background: rgba(255, 255, 255, 1);
+    border-radius: 50%;
+
+    animation: circle 2s infinite cubic-bezier(.4, .6, 1, 0);
+}
+
+@keyframes circle {
+    0% {
+        transform: translate(-50%, 0);
+        outline: 0 solid rgba(255, 255, 255, 1);
+
+
+    }
+
+    90% {
+        outline: 0 solid rgba(255, 255, 255, 1);
+    }
+
+    100% {
+        transform: translate(-50%, 90px);
+        outline: 30px solid rgba(255, 255, 255, 0);
+    }
+}
+
+.maincontent .tit {
+    margin: 0 auto 30px auto;
+    text-align: center;
+}
+
+.maincontent h2 strong {
+    display: block;
+    font-size: 16px;
+    margin: 0 0 10px 0;
+
+
+}
+
+.maincontent h2 span {
+
+    font-size: 40px;
+    font-weight: 500;
+    color: #866750;
+
+}
+
+.maincontent .inner {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 30px
+}
+
+.maincontent figure {
+    text-align: center;
+}
+
+.maincontent .img_box {
+    position: relative;
+    margin: 0 0 20px 0;
+    overflow: hidden;
+
+
+}
+
+.maincontent .img_box img {
+    transition: 1s;
+}
+
+.maincontent .img_box:hover img {
+    transform: scale(1.2);
+
+
+}
+
+.maincontent .img_box::after {
+    content: attr(data-title);
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    line-height: 30px;
+    color: #fff;
+    background: #866750;
+    text-align: center;
+
+}
+
+
+
+.maincontent .title {
+    font-size: 18px;
+    font-weight: 500;
+    margin: 0 0 10px 0;
+}
+
+.mainevent {
+    padding: 100px 0 400px 0;
+    background: url(../images/bg_main2.jpg) no-repeat left bottom/cover;
+}
+
+
+
+.mainevent h2 span {
+    display: block;
+    color: #fff;
+    text-align: center;
+    font-size: 30px;
+    line-height: 36px;
+}
+
+.mainevent .tit {
+    margin: 0 auto 27px auto;
+}
+
+.mainevent .inner {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+}
+
+.mainevent .itm {
+    padding: 40px 50px;
+    background: rgba(134, 103, 80, 0.75);
+    color: #fff;
+    text-align: center;
+    border-radius: 30px;
+}
+
+.mainevent .itm h3 {
+    font-size: 25px;
+    font-weight: 500;
+    margin: 0 0 10px 0;
+    line-height: 1.4;
+}
+
+.mainevent .itm p {
+    font-size: 14px;
+    font-weight: 100;
+    line-height: 1.4;
+}
+
+.footer {
+    padding: 80px 0;
+    font-size: 12px;
+
+}
+
+.footer ul {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    margin: 0 0 5px 0;
+
+
+}
+
+.footer ul>li {
+    position: relative;
+}
+
+.footer ul>li~li::before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: -15px;
+    transform: translate(50%, -50%);
+    width: 1px;
+    height: 10px;
+    background: #666;
+}
+
+.footer address {
+    text-align: center;
+}
+
+.footer .title {
+    position: relative;
+    font-family: 'Noto Serif KR', serif;
+
+    padding: 30px 0;
+    text-align: center;
+    font-size: 40px;
+    color: #ddd;
+
+    width: 790px;
+    margin: 0 auto;
+}
+
+.footer .title span {
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: block;
+
+}
+
+.footer .title span::after {
+    content: " “ 카시아 속초는 대포항 앞바다와 바로 연결 ”";
+    position: absolute;
+    top: 0;
+    left: 0;
+    color: #333;
+
+    width: 0;
+    white-space: nowrap;
+    overflow: hidden;
+
+
+    border-right: 1px solid #999;
+    animation: tt 4s infinite steps(40, end);
+
+
+
+}
+
+.footer .title:hover span::after {
+    width: 820px;
+
+}
+
+@keyframes tt {
+    0% {
+        width: 0;
+    }
+
+    100% {
+        width: 820px;
+    }
+
+
+}
+
+.tbtn {
+    position: relative;
+
+
+
+    border: 1px solid #333;
+
+
+
+    padding: 5px 0;
+    width: 20px;
+    text-align: center;
+    font-size: 15px;
+    white-space: nowrap;
+    overflow: hidden;
+    transition: 0.5s;
+
+
+
+}
+
+
+
+.tbtn:hover {
+    width: 100px;
+
+
+}
+
+/*
+
+@media 768px
+
+*/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media (max-width: 768px) {
+
+    .header {
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        z-index: 999;
+
+        display: none;
+    }
+
+    .header.on {
+        background: rgba(0, 0, 0, 0.7);
+        transition: 0.5s;
+
+    }
+
+    .header h1 {
+        min-width: 220px;
+    }
+
+    .header .header_wrap {
+        display: flex;
+
+        height: 100px;
+        padding: 0 30px;
+
+    }
+
+    .gnb>ul {
+        display: flex;
+        gap: 40px;
+    }
+
+    .gnb a {
+        display: block;
+        white-space: nowrap;
+        color: #fff;
+        font-size: 18px;
+    }
+
+    .header .custiomer_link {
+        width: 220px;
+    }
+
+    .header .custiomer_link a {
+        display: block;
+        white-space: nowrap;
+        font-size: 25px;
+        font-weight: 700;
+        color: #fff;
+    }
+
+
+
+    .mainvisual {
+        position: relative;
+        z-index: 1;
+
+        border-radius: 0 0 200px 0;
+        overflow: hidden;
+
+
+    }
+
+    .mainvisual::after {
+        content: "";
+        position: absolute;
+        inset: 0 0 0 0;
+        background: #000;
+        opacity: 0.3;
+    }
+
+    .mainvisual .slogan {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        z-index: 999;
+
+        padding: 0 15px;
+
+    }
+
+    .mainvisual h2 {
+        margin: 0 0 30px 0;
+        color: #fff;
+        text-align: center;
+        text-shadow: 0 0 2px #000;
+    }
+
+    .mainvisual h2 strong {
+        display: block;
+        margin: 0 0 20px 0;
+        font-size: 20px;
+        font-weight: 300;
+    }
+
+    .mainvisual h2 span {
+        display: block;
+        font-size: 60px;
+        font-weight: 700;
+    }
+
+    .mainvisual p {
+        max-width: 400px;
+        text-shadow: 0 0 3px #000;
+        font-size: 15px;
+        margin: 0 auto;
+        color: #fff;
+        text-align: center;
+    }
+
+
+    .mainvisual .mainslide .itm01 {
+        height: 100vh;
+        background: url(../images/bg_intro01.jpg )no-repeat center center/cover;
+    }
+
+    .mainvisual .mainslide .itm02 {
+        height: 100vh;
+        background: url(../images/bg_intro02.jpg )no-repeat center center/cover;
+    }
+
+    .mainvisual .mainslide .itm03 {
+        height: 100vh;
+        background: url(../images/bg_intro03.jpg )no-repeat center center/cover;
+    }
+
+    .mainvisual .slick-dots {
+        position: absolute;
+        bottom: 200px;
+
+        left: 50%;
+        transform: translate(-50%, -50%);
+        z-index: 999;
+
+
+    }
+
+
+
+    .mainvisual .slick-dots>li button {
+        position: relative;
+        width: 80px;
+        height: 4px;
+        background: #ddd;
+        border-radius: 2px;
+        overflow: hidden;
+        margin: 0 2px;
+
+        border: none;
+        font-size: 0;
+
+
+    }
+
+    .mainvisual .slick-dots>li {
+        display: inline-block;
+        padding: 5px 0;
+        cursor: pointer;
+    }
+
+    .mainvisual .slick-dots>li button::after {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 0;
+        height: 100%;
+        background: #555;
+
+    }
+
+    .mainvisual .slick-dots>li.slick-active button::after {
+        width: 100%;
+        transition: 3s;
+    }
+
+    .mainvisual .arrows {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        z-index: 999;
+
+        max-width: 1400px;
+        width: 100%;
+
+        color: #fff;
+        font-size: 30px;
+
+
+    }
+
+    .mainvisual .arrows i {
+        padding: 35px;
+        background: rgba(0, 0, 0, 0.1);
+        border-radius: 0%;
+        color: #fff;
+        font-size: 30px;
+        opacity: 0.5;
+        cursor: pointer;
+        transition: 1s;
+    }
+
+    .mainvisual .arrows .left {
+
+        position: absolute;
+        left: 0;
+        top: 0;
+    }
+
+
+    .mainvisual:hover .arrows .left {
+        opacity: 0.8;
+        transform: translate(0, 0)
+    }
+
+    .mainvisual .arrows .right {
+        position: absolute;
+        right: 0;
+        top: 0;
+    }
+
+    .mainvisual:hover .arrows .right {
+        opacity: 0.8;
+        transform: translate(0, 0)
+    }
+
+    .mainvisual .scroll {
+        position: absolute;
+        bottom: 100px;
+        left: 50%;
+        transform: translate(-50%, 0);
+        z-index: 999;
+
+    }
+
+    .mainvisual .scroll span {
+        position: relative;
+        color: #fff;
+        font-size: 12px;
+        text-transform: uppercase;
+
+    }
+
+    .mainvisual .scroll span::before {
+        content: "";
+        position: absolute;
+        top: 20px;
+        left: 50%;
+        width: 1px;
+        height: 100px;
+        background: rgba(255, 255, 255, 0.5);
+        transform: translate(-50%, 0)
+    }
+
+    .mainvisual .scroll span::after {
+        content: "";
+        position: absolute;
+        top: 20px;
+        left: 50%;
+        width: 5px;
+        height: 5px;
+        background: rgba(255, 255, 255, 1);
+        border-radius: 50%;
+
+        animation: circle 2s infinite cubic-bezier(.4, .6, 1, 0);
+    }
+
+    @keyframes circle {
+        0% {
+            transform: translate(-50%, 0);
+            outline: 0 solid rgba(255, 255, 255, 1);
+
+
+        }
+
+        90% {
+            outline: 0 solid rgba(255, 255, 255, 1);
+        }
+
+        100% {
+            transform: translate(-50%, 90px);
+            outline: 30px solid rgba(255, 255, 255, 0);
+        }
+    }
+
+    .maincontent .tit {
+        margin: 0 auto 30px auto;
+        text-align: center;
+    }
+
+    .maincontent h2 strong {
+        display: block;
+        font-size: 16px;
+        margin: 0 0 10px 0;
+
+
+    }
+
+    .maincontent h2 span {
+
+        font-size: 40px;
+        font-weight: 500;
+        color: #866750;
+
+    }
+
+    .maincontent .inner {
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+        gap: 30px
+    }
+
+    .maincontent figure {
+        text-align: center;
+    }
+
+    .maincontent .img_box {
+        position: relative;
+        margin: 0 0 20px 0;
+        overflow: hidden;
+
+
+    }
+
+    .maincontent .img_box img {
+        transition: 1s;
+    }
+
+    .maincontent .img_box:hover img {
+        transform: scale(1.2);
+
+
+    }
+
+    .maincontent .img_box::after {
+        content: attr(data-title);
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        line-height: 30px;
+        color: #fff;
+        background: #866750;
+        text-align: center;
+
+    }
+
+
+
+    .maincontent .title {
+        font-size: 18px;
+        font-weight: 500;
+        margin: 0 0 10px 0;
+    }
+
+    .mainevent {
+        padding: 100px 0 400px 0;
+        background: url(../images/bg_main2.jpg) no-repeat 30% bottom/cover;
+    }
+
+
+
+    .mainevent h2 span {
+        display: block;
+        color: #fff;
+        text-align: center;
+        font-size: 30px;
+        line-height: 36px;
+    }
+
+    .mainevent .tit {
+        margin: 0 auto 27px auto;
+    }
+
+    .mainevent .inner {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        gap: 50px;
+    }
+
+    .mainevent .itm {
+        padding: 40px 50px;
+        background: rgba(134, 103, 80, 0.75);
+        color: #fff;
+        text-align: center;
+        border-radius: 30px;
+    }
+
+    .mainevent .itm h3 {
+        font-size: 25px;
+        font-weight: 500;
+        margin: 0 0 10px 0;
+        line-height: 1.4;
+    }
+
+    .mainevent .itm p {
+        font-size: 14px;
+        font-weight: 100;
+        line-height: 1.4;
+    }
+
+
+
+    .footer ul {
+
+        align-items: center;
+        flex-direction: column;
+        gap: 5px;
+        margin: 0 0 10px 0;
+
+
+    }
+
+    .footer ul>li {
+        position: relative;
+    }
+
+    .footer ul>li~li::before {
+        content: "";
+        display: none;
+
+    }
+
+
+    .footer .title {
+        position: relative;
+        font-family: 'Noto Serif KR', serif;
+
+        padding: 30px 0;
+        text-align: center;
+        font-size: 40px;
+        color: #ddd;
+
+        width: 790px;
+        margin: 0 auto;
+    }
+
+    .footer .title span {
+        position: absolute;
+        top: 0;
+        left: 0;
+        display: block;
+
+    }
+
+    .footer .title span::after {
+        content: " “ 카시아 속초는 대포항 앞바다와 바로 연결 ”";
+        position: absolute;
+        top: 0;
+        left: 0;
+        color: #333;
+
+        width: 0;
+        white-space: nowrap;
+        overflow: hidden;
+
+
+        border-right: 1px solid #999;
+        animation: tt 4s infinite steps(40, end);
+
+
+
+    }
+
+    .footer .title:hover span::after {
+        width: 820px;
+
+    }
+
+    @keyframes tt {
+        0% {
+            width: 0;
+        }
+
+        100% {
+            width: 820px;
+        }
+
+
+    }
+
+    .tbtn {
+        position: relative;
+
+
+
+        border: 1px solid #333;
+
+
+
+        padding: 5px 0;
+        width: 20px;
+        text-align: center;
+        font-size: 15px;
+        white-space: nowrap;
+        overflow: hidden;
+        transition: 0.5s;
+
+
+
+    }
+
+
+
+    .tbtn:hover {
+        width: 100px;
+
+
+    }
+}
