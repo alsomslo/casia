@@ -3,14 +3,9 @@
 @import url('https://cdn.jsdelivr.net/npm/xeicon@2.3.3/xeicon.min.css');
 
 
-
-
 body {
-
     font-family: 'Roboto', 'Noto Sans KR', sans-serif;
 }
-
-
 
 .blind {
     position: absolute;
@@ -37,7 +32,7 @@ body {
     padding: 0 15px;
 }
 
-.dbg {
+.bg {
     background: #f9f9f9;
 }
 

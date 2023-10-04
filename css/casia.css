@@ -1,24 +1,13 @@
-* {
-    outline: 1px solid tomato;
-}
-
-
-
-
-
 .header {
     position: fixed;
     top: 0;
     left: 0;
     right: 0;
     z-index: 999;
-
 }
 
 .header.on {
     background: rgba(0, 0, 0, 0.7);
-    transition: 0.5s;
-
 }
 
 .header h1 {
@@ -30,8 +19,7 @@
     justify-content: space-between;
     align-items: center;
     height: 100px;
-    padding: 0 30px;
-
+    padding: 0 80px;
 }
 
 .gnb>ul {
@@ -44,108 +32,103 @@
     white-space: nowrap;
     color: #fff;
     font-size: 18px;
+
 }
 
-.header .custiomer_link {
+.header .customer_link {
     width: 220px;
 }
 
-.header .custiomer_link a {
+.header .customer_link a {
     display: block;
     white-space: nowrap;
-    font-size: 25px;
-    font-weight: 700;
     color: #fff;
+    font-size: 35px;
+    font-weight: 700;
 }
 
-
-
-.mainvisual {
+.mainVisual {
     position: relative;
     z-index: 1;
 
     border-radius: 0 0 200px 0;
     overflow: hidden;
-
-
 }
 
-.mainvisual::after {
+.mainVisual::after {
     content: "";
     position: absolute;
     inset: 0 0 0 0;
-    background: #000;
-    opacity: 0.3;
+    background: rgba(0, 0, 0, 0.35);
 }
 
-.mainvisual .slogan {
+.mainVisual .slogan {
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
     z-index: 999;
-
 }
 
-.mainvisual h2 {
+.mainVisual h2 {
     margin: 0 0 30px 0;
     color: #fff;
     text-align: center;
-    text-shadow: 0 0 2px #000;
+    text-shadow: 0 0 3px #000;
 }
 
-.mainvisual h2 strong {
+.mainVisual h2 strong {
     display: block;
     margin: 0 0 20px 0;
     font-size: 20px;
-    font-weight: 300;
+    font-weight: 100;
 }
 
-.mainvisual h2 span {
+.mainVisual h2 span {
     display: block;
     font-size: 60px;
     font-weight: 700;
 }
 
-.mainvisual p {
+.mainVisual p {
     max-width: 400px;
+    margin: 0 auto;
     text-shadow: 0 0 3px #000;
     font-size: 15px;
-    margin: 0 auto;
     color: #fff;
     text-align: center;
 }
 
-
-.mainvisual .mainslide .itm01 {
+.mainVisual .mainSlide .itm01 {
     height: 100vh;
-    background: url(../images/bg_intro01.jpg )no-repeat center center/cover;
+    background: url(../images/bg_intro01.jpg) no-repeat center center/cover;
 }
 
-.mainvisual .mainslide .itm02 {
+.mainVisual .mainSlide .itm02 {
     height: 100vh;
-    background: url(../images/bg_intro02.jpg )no-repeat center center/cover;
+    background: url(../images/bg_intro02.jpg) no-repeat center center/cover;
 }
 
-.mainvisual .mainslide .itm03 {
+.mainVisual .mainSlide .itm03 {
     height: 100vh;
-    background: url(../images/bg_intro03.jpg )no-repeat center center/cover;
+    background: url(../images/bg_intro03.jpg) no-repeat center center/cover;
 }
 
-.mainvisual .slick-dots {
+.mainVisual .slick-dots {
     position: absolute;
     bottom: 200px;
-
     left: 50%;
-    transform: translate(-50%, -50%);
+    transform: translate(-50%, 0);
     z-index: 999;
-
-
 }
 
+.mainVisual .slick-dots>li {
+    display: inline-block;
+    padding: 5px 0;
+    cursor: pointer;
+}
 
-
-.mainvisual .slick-dots>li button {
+.mainVisual .slick-dots>li button {
     position: relative;
     width: 80px;
     height: 4px;
@@ -155,34 +138,27 @@
     margin: 0 2px;
 
     border: none;
+    outline: none;
     font-size: 0;
-
-
 }
 
-.mainvisual .slick-dots>li {
-    display: inline-block;
-    padding: 5px 0;
-    cursor: pointer;
-}
-
-.mainvisual .slick-dots>li button::after {
+.mainVisual .slick-dots>li button::after {
     content: "";
     position: absolute;
     top: 0;
     left: 0;
     width: 0;
     height: 100%;
-    background: #555;
+    background: #ff6347;
 
 }
 
-.mainvisual .slick-dots>li.slick-active button::after {
+.mainVisual .slick-dots>li.slick-active button::after {
     width: 100%;
     transition: 3s;
 }
 
-.mainvisual .arrows {
+.mainVisual .arrows {
     position: absolute;
     top: 50%;
     left: 50%;
@@ -191,14 +167,9 @@
 
     max-width: 1400px;
     width: 100%;
-
-    color: #fff;
-    font-size: 30px;
-
-
 }
 
-.mainvisual .arrows i {
+.mainVisual .arrows i {
     padding: 35px;
     background: rgba(0, 0, 0, 0.1);
     border-radius: 50%;
@@ -206,51 +177,47 @@
     font-size: 30px;
     opacity: 0.5;
     cursor: pointer;
-    transition: 1s;
+    transition: 0.5s;
 }
 
-.mainvisual .arrows .left {
-
+.mainVisual .arrows .left {
     position: absolute;
     left: 0;
     top: 0;
 }
 
-
-.mainvisual:hover .arrows .left {
+.mainVisual:hover .arrows .left {
     opacity: 0.8;
-    transform: translate(100px, 0)
+    transform: translate(30px, 0);
 }
 
-.mainvisual .arrows .right {
+.mainVisual .arrows .right {
     position: absolute;
     right: 0;
     top: 0;
 }
 
-.mainvisual:hover .arrows .right {
+.mainVisual:hover .arrows .right {
     opacity: 0.8;
-    transform: translate(-100px, 0)
+    transform: translate(-30px, 0);
 }
 
-.mainvisual .scroll {
+.mainVisual .scroll {
     position: absolute;
     bottom: 100px;
     left: 50%;
     transform: translate(-50%, 0);
     z-index: 999;
-
 }
 
-.mainvisual .scroll span {
+.mainVisual .scroll span {
     position: relative;
     color: #fff;
     font-size: 12px;
     text-transform: uppercase;
-
 }
 
-.mainvisual .scroll span::before {
+.mainVisual .scroll span::before {
     content: "";
     position: absolute;
     top: 20px;
@@ -258,10 +225,10 @@
     width: 1px;
     height: 100px;
     background: rgba(255, 255, 255, 0.5);
-    transform: translate(-50%, 0)
+    transform: translate(-50%, 0);
 }
 
-.mainvisual .scroll span::after {
+.mainVisual .scroll span::after {
     content: "";
     position: absolute;
     top: 20px;
@@ -270,16 +237,15 @@
     height: 5px;
     background: rgba(255, 255, 255, 1);
     border-radius: 50%;
+    transform: translate(-50%, 0);
 
-    animation: circle 2s infinite cubic-bezier(.4, .6, 1, 0);
+    animation: circle 1.5s infinite cubic-bezier(1, .18, .49, 1.03);
 }
 
 @keyframes circle {
     0% {
         transform: translate(-50%, 0);
-        outline: 0 solid rgba(255, 255, 255, 1);
-
-
+        outline: 0 solid rgba(255, 255, 255, 1)
     }
 
     90% {
@@ -288,60 +254,43 @@
 
     100% {
         transform: translate(-50%, 90px);
-        outline: 30px solid rgba(255, 255, 255, 0);
+        outline: 20px solid rgba(255, 255, 255, 0);
     }
 }
 
-.maincontent .tit {
+.mianContent .tit {
     margin: 0 auto 30px auto;
     text-align: center;
 }
 
-.maincontent h2 strong {
+.mianContent h2 strong {
     display: block;
-    font-size: 16px;
+    font-size: 14px;
     margin: 0 0 10px 0;
-
-
 }
 
-.maincontent h2 span {
-
+.mianContent h2 span {
     font-size: 40px;
     font-weight: 500;
     color: #866750;
-
 }
 
-.maincontent .inner {
+.mianContent .inner {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    gap: 30px
+    gap: 30px;
 }
 
-.maincontent figure {
+.mianContent figure {
     text-align: center;
 }
 
-.maincontent .img_box {
+.mianContent .img_box {
     position: relative;
     margin: 0 0 20px 0;
-    overflow: hidden;
-
-
 }
 
-.maincontent .img_box img {
-    transition: 1s;
-}
-
-.maincontent .img_box:hover img {
-    transform: scale(1.2);
-
-
-}
-
-.maincontent .img_box::after {
+.mianContent .img_box::after {
     content: attr(data-title);
     position: absolute;
     bottom: 0;
@@ -351,43 +300,40 @@
     color: #fff;
     background: #866750;
     text-align: center;
-
 }
 
-
-
-.maincontent .title {
+.mianContent .title {
     font-size: 18px;
     font-weight: 500;
     margin: 0 0 10px 0;
 }
 
-.mainevent {
+.mainEvent {
     padding: 100px 0 400px 0;
     background: url(../images/bg_main2.jpg) no-repeat left bottom/cover;
 }
 
+.mainEvent h2 {}
 
-
-.mainevent h2 span {
+.mainEvent h2 span {
     display: block;
-    color: #fff;
     text-align: center;
+    color: #fff;
     font-size: 30px;
     line-height: 36px;
 }
 
-.mainevent .tit {
+.mainEvent .tit {
     margin: 0 auto 27px auto;
 }
 
-.mainevent .inner {
+.mainEvent .inner {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    grid-template-columns: repeat(3, 1fr);
     gap: 30px;
 }
 
-.mainevent .itm {
+.mainEvent .itm {
     padding: 40px 50px;
     background: rgba(134, 103, 80, 0.75);
     color: #fff;
@@ -395,23 +341,15 @@
     border-radius: 30px;
 }
 
-.mainevent .itm h3 {
+.mainEvent .itm h3 {
     font-size: 25px;
     font-weight: 500;
-    margin: 0 0 10px 0;
-    line-height: 1.4;
-}
-
-.mainevent .itm p {
-    font-size: 14px;
-    font-weight: 100;
-    line-height: 1.4;
+    margin: 0 0 20px 0;
 }
 
 .footer {
     padding: 80px 0;
     font-size: 12px;
-
 }
 
 .footer ul {
@@ -419,8 +357,6 @@
     justify-content: center;
     gap: 30px;
     margin: 0 0 5px 0;
-
-
 }
 
 .footer ul>li {
@@ -433,8 +369,8 @@
     top: 50%;
     left: -15px;
     transform: translate(50%, -50%);
-    width: 1px;
-    height: 10px;
+    width: 2px;
+    height: 2px;
     background: #666;
 }
 
@@ -445,26 +381,21 @@
 .footer .title {
     position: relative;
     font-family: 'Noto Serif KR', serif;
-
     padding: 30px 0;
     text-align: center;
     font-size: 40px;
     color: #ddd;
-
-    width: 790px;
-    margin: 0 auto;
 }
 
 .footer .title span {
     position: absolute;
     top: 0;
-    left: 0;
-    display: block;
-
+    left: 50%;
+    transform: translate(-50%, 0);
 }
 
 .footer .title span::after {
-    content: " “ 카시아 속초는 대포항 앞바다와 바로 연결 ”";
+    content: "“카시아 속초는 대포항 앞바다와 바로 연결”";
     position: absolute;
     top: 0;
     left: 0;
@@ -474,18 +405,18 @@
     white-space: nowrap;
     overflow: hidden;
 
-
     border-right: 1px solid #999;
-    animation: tt 4s infinite steps(40, end);
-
-
-
+    /* transition: 2s;
+    transition-timing-function: steps(20, end); */
+    animation: tt 6s infinite steps(20, end);
+    /* animation-timing-function: steps(20, end); */
 }
+
 
 .footer .title:hover span::after {
-    width: 820px;
-
+    width: 760px;
 }
+
 
 @keyframes tt {
     0% {
@@ -493,44 +424,59 @@
     }
 
     100% {
-        width: 820px;
+        width: 800px;
     }
+}
 
-
+.btn_wrap {
+    position: relative;
+    height: 60px;
 }
 
 .tbtn {
-    position: relative;
-
-
-
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translate(-50%, 0);
     border: 1px solid #333;
-
-
-
-    padding: 5px 0;
-    width: 20px;
-    text-align: center;
+    display: inline-flex;
+    align-items: center;
+    padding: 0 5px;
     font-size: 15px;
-    white-space: nowrap;
+    height: 30px;
+    cursor: pointer;
+    user-select: none;
+}
+
+.tbtn span {
+    display: block;
+    width: 0;
     overflow: hidden;
+    white-space: nowrap;
     transition: 0.5s;
-
-
+    transform: translate(0, 2px);
 
 }
 
-
-
-.tbtn:hover {
+.tbtn:hover span {
     width: 100px;
-
-
 }
 
-/*
+.mopen {
+    display: none;
+}
 
-@media 768px
+
+
+
+
+
+
+
+
+/* 
+
+@media 768px 
 
 */
 
@@ -547,187 +493,211 @@
 
 
 
-@media (max-width: 768px) {
 
+
+
+
+@media (max-width:768px) {
     .header {
         position: fixed;
         top: 0;
         left: 0;
         right: 0;
         z-index: 999;
-
-        display: none;
     }
 
     .header.on {
+        background: rgba(0, 0, 0, 0);
+    }
+
+    .header h1 {
+        position: relative;
+        z-index: 1000;
+        min-width: 0;
+    }
+
+    .header .header_wrap {
+        align-items: center;
+        height: 100px;
+        padding: 0 15px;
+    }
+
+    .gnb {
+        position: fixed;
+        top: 0;
+        left: -100%;
+        height: 100vh;
+        width: 100%;
+    }
+
+    .gnb.on {
+        left: 0;
         background: rgba(0, 0, 0, 0.7);
+    }
+
+
+
+    .gnb>ul {
+        position: absolute;
+        top: 0;
+        left: -100%;
+        display: flex;
+        flex-direction: column;
+        gap: 0;
+        background: #ff6347;
+        height: 100%;
+        width: calc(100% - 90px);
+
+        padding: 150px 15px 0 15px;
+
         transition: 0.5s;
 
     }
 
-    .header h1 {
-        min-width: 220px;
-    }
-
-    .header .header_wrap {
-        display: flex;
-
-        height: 100px;
-        padding: 0 30px;
-
-    }
-
-    .gnb>ul {
-        display: flex;
-        gap: 40px;
+    .gnb.on>ul {
+        left: 0;
     }
 
     .gnb a {
         display: block;
-        white-space: nowrap;
+        /* white-space: nowrap; */
         color: #fff;
         font-size: 18px;
+        line-height: 40px;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+
     }
 
-    .header .custiomer_link {
+    .header .customer_link {
+        position: fixed;
+        bottom: 50px;
+        left: 15px;
         width: 220px;
     }
 
-    .header .custiomer_link a {
+    .header .customer_link a {
         display: block;
         white-space: nowrap;
-        font-size: 25px;
-        font-weight: 700;
         color: #fff;
+        font-size: 35px;
+        font-weight: 700;
     }
 
-
-
-    .mainvisual {
+    .mainVisual {
         position: relative;
         z-index: 1;
 
         border-radius: 0 0 200px 0;
         overflow: hidden;
-
-
     }
 
-    .mainvisual::after {
+    .mainVisual::after {
         content: "";
         position: absolute;
         inset: 0 0 0 0;
-        background: #000;
-        opacity: 0.3;
+        background: rgba(0, 0, 0, 0.35);
     }
 
-    .mainvisual .slogan {
+    .mainVisual .slogan {
         position: absolute;
         top: 50%;
         left: 50%;
         transform: translate(-50%, -50%);
         z-index: 999;
 
+        width: 100%;
         padding: 0 15px;
-
     }
 
-    .mainvisual h2 {
+    .mainVisual h2 {
         margin: 0 0 30px 0;
         color: #fff;
         text-align: center;
-        text-shadow: 0 0 2px #000;
+        text-shadow: 0 0 3px #000;
     }
 
-    .mainvisual h2 strong {
+    .mainVisual h2 strong {
         display: block;
         margin: 0 0 20px 0;
-        font-size: 20px;
-        font-weight: 300;
+        font-size: 5vw;
+        font-weight: 100;
     }
 
-    .mainvisual h2 span {
+    .mainVisual h2 span {
         display: block;
-        font-size: 60px;
+        font-size: 13vw;
         font-weight: 700;
     }
 
-    .mainvisual p {
+    .mainVisual p {
         max-width: 400px;
+        margin: 0 auto;
         text-shadow: 0 0 3px #000;
         font-size: 15px;
-        margin: 0 auto;
         color: #fff;
         text-align: center;
     }
 
-
-    .mainvisual .mainslide .itm01 {
+    .mainVisual .mainSlide .itm01 {
         height: 100vh;
-        background: url(../images/bg_intro01.jpg )no-repeat center center/cover;
+        background: url(../images/bg_intro01.jpg) no-repeat center center/cover;
     }
 
-    .mainvisual .mainslide .itm02 {
+    .mainVisual .mainSlide .itm02 {
         height: 100vh;
-        background: url(../images/bg_intro02.jpg )no-repeat center center/cover;
+        background: url(../images/bg_intro02.jpg) no-repeat center center/cover;
     }
 
-    .mainvisual .mainslide .itm03 {
+    .mainVisual .mainSlide .itm03 {
         height: 100vh;
-        background: url(../images/bg_intro03.jpg )no-repeat center center/cover;
+        background: url(../images/bg_intro03.jpg) no-repeat center center/cover;
     }
 
-    .mainvisual .slick-dots {
+    .mainVisual .slick-dots {
         position: absolute;
         bottom: 200px;
-
         left: 50%;
-        transform: translate(-50%, -50%);
+        transform: translate(-50%, 0);
         z-index: 999;
-
-
     }
 
-
-
-    .mainvisual .slick-dots>li button {
-        position: relative;
-        width: 80px;
-        height: 4px;
-        background: #ddd;
-        border-radius: 2px;
-        overflow: hidden;
-        margin: 0 2px;
-
-        border: none;
-        font-size: 0;
-
-
-    }
-
-    .mainvisual .slick-dots>li {
+    .mainVisual .slick-dots>li {
         display: inline-block;
         padding: 5px 0;
         cursor: pointer;
     }
 
-    .mainvisual .slick-dots>li button::after {
+    .mainVisual .slick-dots>li button {
+        position: relative;
+        width: 20px;
+        height: 20px;
+        background: #ddd;
+        border-radius: 50%;
+        overflow: hidden;
+        margin: 0 2px;
+
+        border: none;
+        outline: none;
+        font-size: 0;
+    }
+
+    .mainVisual .slick-dots>li button::after {
         content: "";
         position: absolute;
         top: 0;
         left: 0;
         width: 0;
         height: 100%;
-        background: #555;
+        background: #ff6347;
 
     }
 
-    .mainvisual .slick-dots>li.slick-active button::after {
+    .mainVisual .slick-dots>li.slick-active button::after {
         width: 100%;
         transition: 3s;
     }
 
-    .mainvisual .arrows {
+    .mainVisual .arrows {
         position: absolute;
         top: 50%;
         left: 50%;
@@ -736,66 +706,57 @@
 
         max-width: 1400px;
         width: 100%;
-
-        color: #fff;
-        font-size: 30px;
-
-
     }
 
-    .mainvisual .arrows i {
-        padding: 35px;
+    .mainVisual .arrows i {
+        padding: 10px;
         background: rgba(0, 0, 0, 0.1);
-        border-radius: 0%;
+        border-radius: 0;
         color: #fff;
         font-size: 30px;
         opacity: 0.5;
         cursor: pointer;
-        transition: 1s;
+        transition: 0.5s;
     }
 
-    .mainvisual .arrows .left {
-
+    .mainVisual .arrows .left {
         position: absolute;
         left: 0;
         top: 0;
     }
 
-
-    .mainvisual:hover .arrows .left {
+    .mainVisual:hover .arrows .left {
         opacity: 0.8;
-        transform: translate(0, 0)
+        transform: translate(0, 0);
     }
 
-    .mainvisual .arrows .right {
+    .mainVisual .arrows .right {
         position: absolute;
         right: 0;
         top: 0;
     }
 
-    .mainvisual:hover .arrows .right {
+    .mainVisual:hover .arrows .right {
         opacity: 0.8;
-        transform: translate(0, 0)
+        transform: translate(0, 0);
     }
 
-    .mainvisual .scroll {
+    .mainVisual .scroll {
         position: absolute;
         bottom: 100px;
         left: 50%;
         transform: translate(-50%, 0);
         z-index: 999;
-
     }
 
-    .mainvisual .scroll span {
+    .mainVisual .scroll span {
         position: relative;
         color: #fff;
         font-size: 12px;
         text-transform: uppercase;
-
     }
 
-    .mainvisual .scroll span::before {
+    .mainVisual .scroll span::before {
         content: "";
         position: absolute;
         top: 20px;
@@ -803,10 +764,10 @@
         width: 1px;
         height: 100px;
         background: rgba(255, 255, 255, 0.5);
-        transform: translate(-50%, 0)
+        transform: translate(-50%, 0);
     }
 
-    .mainvisual .scroll span::after {
+    .mainVisual .scroll span::after {
         content: "";
         position: absolute;
         top: 20px;
@@ -815,16 +776,15 @@
         height: 5px;
         background: rgba(255, 255, 255, 1);
         border-radius: 50%;
+        transform: translate(-50%, 0);
 
-        animation: circle 2s infinite cubic-bezier(.4, .6, 1, 0);
+        animation: circle 1.5s infinite cubic-bezier(1, .18, .49, 1.03);
     }
 
     @keyframes circle {
         0% {
             transform: translate(-50%, 0);
-            outline: 0 solid rgba(255, 255, 255, 1);
-
-
+            outline: 0 solid rgba(255, 255, 255, 1)
         }
 
         90% {
@@ -833,60 +793,43 @@
 
         100% {
             transform: translate(-50%, 90px);
-            outline: 30px solid rgba(255, 255, 255, 0);
+            outline: 20px solid rgba(255, 255, 255, 0);
         }
     }
 
-    .maincontent .tit {
+    .mianContent .tit {
         margin: 0 auto 30px auto;
         text-align: center;
     }
 
-    .maincontent h2 strong {
+    .mianContent h2 strong {
         display: block;
-        font-size: 16px;
+        font-size: 14px;
         margin: 0 0 10px 0;
-
-
     }
 
-    .maincontent h2 span {
-
+    .mianContent h2 span {
         font-size: 40px;
         font-weight: 500;
         color: #866750;
-
     }
 
-    .maincontent .inner {
+    .mianContent .inner {
         display: grid;
         grid-template-columns: repeat(1, 1fr);
-        gap: 30px
+        gap: 30px;
     }
 
-    .maincontent figure {
+    .mianContent figure {
         text-align: center;
     }
 
-    .maincontent .img_box {
+    .mianContent .img_box {
         position: relative;
         margin: 0 0 20px 0;
-        overflow: hidden;
-
-
     }
 
-    .maincontent .img_box img {
-        transition: 1s;
-    }
-
-    .maincontent .img_box:hover img {
-        transform: scale(1.2);
-
-
-    }
-
-    .maincontent .img_box::after {
+    .mianContent .img_box::after {
         content: attr(data-title);
         position: absolute;
         bottom: 0;
@@ -896,43 +839,40 @@
         color: #fff;
         background: #866750;
         text-align: center;
-
     }
 
-
-
-    .maincontent .title {
+    .mianContent .title {
         font-size: 18px;
         font-weight: 500;
         margin: 0 0 10px 0;
     }
 
-    .mainevent {
+    .mainEvent {
         padding: 100px 0 400px 0;
         background: url(../images/bg_main2.jpg) no-repeat 30% bottom/cover;
     }
 
+    .mainEvent h2 {}
 
-
-    .mainevent h2 span {
+    .mainEvent h2 span {
         display: block;
-        color: #fff;
         text-align: center;
-        font-size: 30px;
-        line-height: 36px;
+        color: #fff;
+        font-size: 4vw;
+        line-height: 1.3;
     }
 
-    .mainevent .tit {
+    .mainEvent .tit {
         margin: 0 auto 27px auto;
     }
 
-    .mainevent .inner {
+    .mainEvent .inner {
         display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        grid-template-columns: repeat(1, 1fr);
         gap: 50px;
     }
 
-    .mainevent .itm {
+    .mainEvent .itm {
         padding: 40px 50px;
         background: rgba(134, 103, 80, 0.75);
         color: #fff;
@@ -940,29 +880,24 @@
         border-radius: 30px;
     }
 
-    .mainevent .itm h3 {
-        font-size: 25px;
+    .mainEvent .itm h3 {
+        font-size: 4vw;
         font-weight: 500;
-        margin: 0 0 10px 0;
-        line-height: 1.4;
+        margin: 0 0 20px 0;
     }
 
-    .mainevent .itm p {
-        font-size: 14px;
-        font-weight: 100;
-        line-height: 1.4;
+    .footer {
+        padding: 80px 0;
+        font-size: 12px;
     }
-
-
 
     .footer ul {
-
+        display: flex;
+        justify-content: center;
         align-items: center;
         flex-direction: column;
         gap: 5px;
         margin: 0 0 10px 0;
-
-
     }
 
     .footer ul>li {
@@ -970,95 +905,46 @@
     }
 
     .footer ul>li~li::before {
-        content: "";
         display: none;
-
-    }
-
-
-    .footer .title {
-        position: relative;
-        font-family: 'Noto Serif KR', serif;
-
-        padding: 30px 0;
-        text-align: center;
-        font-size: 40px;
-        color: #ddd;
-
-        width: 790px;
-        margin: 0 auto;
-    }
-
-    .footer .title span {
+        content: "";
         position: absolute;
-        top: 0;
-        left: 0;
+        top: 50%;
+        left: -15px;
+        transform: translate(50%, -50%);
+        width: 2px;
+        height: 2px;
+        background: #666;
+    }
+
+    .footer address {
+        text-align: center;
+    }
+
+    .mopen {
         display: block;
-
+        position: fixed;
+        top: 30px;
+        right: 30px;
     }
 
-    .footer .title span::after {
-        content: " “ 카시아 속초는 대포항 앞바다와 바로 연결 ”";
-        position: absolute;
-        top: 0;
-        left: 0;
-        color: #333;
-
-        width: 0;
-        white-space: nowrap;
-        overflow: hidden;
-
-
-        border-right: 1px solid #999;
-        animation: tt 4s infinite steps(40, end);
-
-
-
+    .mopen i {
+        background: #f9f9f9;
+        font-size: 24px;
+        padding: 3px;
+        border-radius: 3px;
     }
 
-    .footer .title:hover span::after {
-        width: 820px;
-
+    .mopen span::before {
+        content: '\e91c';
+        font-family: xeicon;
+        display: block;
+        background: #f9f9f9;
+        font-size: 24px;
+        padding: 3px;
+        border-radius: 3px;
     }
 
-    @keyframes tt {
-        0% {
-            width: 0;
-        }
-
-        100% {
-            width: 820px;
-        }
-
-
-    }
-
-    .tbtn {
-        position: relative;
-
-
-
-        border: 1px solid #333;
-
-
-
-        padding: 5px 0;
-        width: 20px;
-        text-align: center;
-        font-size: 15px;
-        white-space: nowrap;
-        overflow: hidden;
-        transition: 0.5s;
-
-
-
-    }
-
-
-
-    .tbtn:hover {
-        width: 100px;
-
-
+    .mopen.on span::before {
+        content: '\e921';
     }
 }

@@ -5,13 +5,11 @@
 
     font-size: inherit;
     font-weight: inherit;
-
 }
 
 *::before,
 *::after {
     box-sizing: border-box;
-
 }
 
 ul,
@@ -28,7 +26,6 @@ a {
 img {
     vertical-align: middle;
     max-width: 100%;
-
 }
 
 p {
